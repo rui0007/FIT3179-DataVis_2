@@ -5,7 +5,7 @@
     "layer": [
       {
         "data": {
-          "url": "",
+          "url": "data/dot_map.vg.json",
           "format": {
             "type": "topojson",
             "feature": "states"
@@ -22,7 +22,7 @@
       },
       {
         "data": {
-          "url": "dot_map.vg.csv"
+          "url": "data/dot_map.vg.csv"
         },
         "projection": {
           "type": "albersUsa"
