@@ -11,33 +11,33 @@
           "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/js/nsw_localities_shp.json",
           "format": {
             "type": "topojson",
-            "feature": "nsw_localities"
+            "feature": "arcs"
           }
         },
         "projection": {
-          "type": "equirectangular"
+          "type": "mercator"
         },
         "mark": {
           "type": "geoshape",
-          "fill": "gainsboro",
+          "fill": "white",
           "stroke": "white"
         }
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/covid-19_clinics_clean.csv."
+          "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/confrimed_location_clean.csv"
         },
         "projection": {
-          "type": "equirectangular"
+          "type": "mercator"
         },
         "mark": "circle",
         "encoding": {
           "longitude": {
-            "field": "Longitude",
+            "field": "Long",
             "type": "quantitative"
           },
           "latitude": {
-            "field": "Latitude",
+            "field": "Lat",
             "type": "quantitative"
           },
           "size": {"value": 5},

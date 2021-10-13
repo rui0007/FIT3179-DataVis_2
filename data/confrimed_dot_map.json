@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1500,
+  "width": 1000,
   "height": 900,
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/nsw_localities_shp.json",
+        "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/test_map.json",
         "format": {
           "type": "topojson",
           "feature": "arcs"
