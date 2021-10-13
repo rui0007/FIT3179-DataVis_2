@@ -8,11 +8,11 @@
         "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/state_level.json",
         "format": {
           "type": "topojson",
-          "feature": "state_level"
+          "feature": "map"
         }
       },
       "projection": {
-        "type": "mercator"
+        "type": "equalEarth"
       },
       "mark": {
         "type": "geoshape",
@@ -26,7 +26,7 @@
         "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/confrimed_location_clean.csv"
       },
       "projection": {
-        "type": "mercator"
+        "type": "equalEarth"
       },
       "mark": "circle",
       "encoding": {
