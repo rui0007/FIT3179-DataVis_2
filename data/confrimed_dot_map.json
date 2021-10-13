@@ -31,11 +31,11 @@
       "mark": "circle",
       "encoding": {
         "longitude": {
-          "field": "Longitude",
+          "field": "Lon",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "Latitude",
+          "field": "Lat",
           "type": "quantitative"
         },
         "size": { "value": 5 },
