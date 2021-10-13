@@ -1,18 +1,21 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 500,
-    "height": 300,
+    "height": 500,
+    "params": [
+
+    ],
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/nsw_localities.topojson",
+          "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/js/nsw_localities_shp.json",
           "format": {
             "type": "topojson",
-            "feature": "type"
+            "feature": "nsw_localities"
           }
         },
         "projection": {
-          "type": "equalEarth"
+          "type": "albers"
         },
         "mark": {
           "type": "geoshape",
@@ -22,10 +25,10 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/dotmap_vg.csv"
+          "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/covid-19_clinics_clean.csv."
         },
         "projection": {
-          "type": "equalEarth"
+          "type": "albers"
         },
         "mark": "circle",
         "encoding": {
