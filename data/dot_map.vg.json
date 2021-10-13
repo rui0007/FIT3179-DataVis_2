@@ -5,7 +5,7 @@
     "layer": [
       {
         "data": {
-          "url": "data/dot_map.vg.json",
+          "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/nsw_localities.json",
           "format": {
             "type": "topojson",
             "feature": "states"
@@ -22,7 +22,7 @@
       },
       {
         "data": {
-          "url": "data/dot_map.vg.csv"
+          "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/dotmap_vg.csv"
         },
         "projection": {
           "type": "albersUsa"
