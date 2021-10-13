@@ -5,18 +5,18 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/nsw_localities.json",
+          "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/nsw_localities.topojson",
           "format": {
             "type": "topojson",
-            "feature": "states"
+            "feature": "STATE"
           }
         },
         "projection": {
-          "type": "albersUsa"
+          "type": "equalEarth"
         },
         "mark": {
           "type": "geoshape",
-          "fill": "lightgray",
+          "fill": "blue",
           "stroke": "white"
         }
       },
@@ -25,19 +25,19 @@
           "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/dotmap_vg.csv"
         },
         "projection": {
-          "type": "albersUsa"
+          "type": "equalEarth"
         },
         "mark": "circle",
         "encoding": {
           "longitude": {
-            "field": "longitude",
+            "field": "Longitude",
             "type": "quantitative"
           },
           "latitude": {
-            "field": "latitude",
+            "field": "Latitude",
             "type": "quantitative"
           },
-          "size": {"value": 10},
+          "size": {"value": 5},
           "color": {"value": "steelblue"}
         }
       }
