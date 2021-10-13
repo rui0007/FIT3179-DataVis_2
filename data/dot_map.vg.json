@@ -8,7 +8,7 @@
           "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/nsw_localities.topojson",
           "format": {
             "type": "topojson",
-            "feature": "STATE"
+            "feature": "type"
           }
         },
         "projection": {
