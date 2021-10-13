@@ -5,10 +5,10 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/test_map.json",
+        "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/state_level.json",
         "format": {
           "type": "topojson",
-          "feature": "arcs"
+          "feature": "state_level"
         }
       },
       "projection": {
