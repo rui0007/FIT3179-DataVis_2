@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 500,
+    "width": "container",
     "height": 500,
     "params": [
 
@@ -15,11 +15,11 @@
           }
         },
         "projection": {
-          "type": "albers"
+          "type": "equirectangular"
         },
         "mark": {
           "type": "geoshape",
-          "fill": "blue",
+          "fill": "gainsboro",
           "stroke": "white"
         }
       },
@@ -28,7 +28,7 @@
           "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/covid-19_clinics_clean.csv."
         },
         "projection": {
-          "type": "albers"
+          "type": "equirectangular"
         },
         "mark": "circle",
         "encoding": {

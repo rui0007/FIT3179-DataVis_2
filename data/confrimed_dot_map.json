@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1500,
+  "height": 900,
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/nsw_localities_shp.json",
+        "format": {
+          "type": "topojson",
+          "feature": "arcs"
+        }
+      },
+      "projection": {
+        "type": "mercator"
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "white",
+        "fillOpacity": 0.2,
+        "stroke": "lightgray"
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/confrimed_location_clean.csv"
+      },
+      "projection": {
+        "type": "mercator"
+      },
+      "mark": "circle",
+      "encoding": {
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
+        "size": { "value": 5 },
+        "color": { "value": "steelblue" }
+      }
+    }
+  ]
+}
