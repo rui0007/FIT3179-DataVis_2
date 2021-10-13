@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1000,
-  "height": 900,
+  "width": 700,
+  "height": 400,
   "layer": [
     {
       "data": {
@@ -23,7 +23,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/data/covid-19_clinics_clean"
+        "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/data/clinic_small.csv"
       },
       "projection": {
         "type": "mercator"
