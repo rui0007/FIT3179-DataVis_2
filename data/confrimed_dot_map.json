@@ -5,7 +5,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/js/state_level.json",
+        "url": "",
         "format": {
           "type": "topojson",
           "feature": "state_level"
@@ -16,14 +16,14 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "white",
+        "fill": "blue",
         "fillOpacity": 0.1,
         "stroke": "lightgray"
       }
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/data/clinic_small.csv"
+        "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/covid-19_clinics_clean.csv"
       },
       "projection": {
         "type": "mercator"
