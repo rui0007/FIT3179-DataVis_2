@@ -17,7 +17,7 @@
             "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/chmap.csv"
           },
           "key": "State",
-          "fields": ["Population"]
+          "fields": ["Total test"]
         }
       }
     ],
@@ -31,7 +31,7 @@
       "color": {
         "field": "Population",
         "type": "quantitative",
-        "title":["total number of people"],
+        "title":["total test"],
         "scale":{
             "domain":[
                 400000,
@@ -47,7 +47,7 @@
       },
       "tooltip": [
         {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
-        {"field": "Population", "type": "quantitative"}
+        {"field": "Total test", "type": "quantitative"}
       ]
     }
   
