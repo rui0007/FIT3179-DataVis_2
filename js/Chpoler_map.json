@@ -54,9 +54,6 @@
         "view": {
             "stroke":null
         },
-        "background":{
-            "color":"#fff7fb"
-        },
         "header": {
             "labelAlign":"center",
             "labelFont":"Oxygen",
