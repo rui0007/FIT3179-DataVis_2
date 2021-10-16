@@ -46,7 +46,7 @@
           "value":0.6
       },
       "tooltip": [
-        {"field": "properties.NAME", "type": "nominal", "title": "State"},
+        {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
         {"field": "Population", "type": "quantitative"}
       ]
     }
