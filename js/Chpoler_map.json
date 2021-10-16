@@ -39,7 +39,8 @@
                 6000000,
                 9000000
             ],
-            "range":["#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5"]
+            "range":["#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5"],
+            "type": "log"
         }
       },
       "opacity":{
@@ -49,6 +50,9 @@
         {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
         {"field": "Test", "type": "quantitative"}
       ]
+    },
+    "layer":{
+
     },
     "config": {
         "view": {
