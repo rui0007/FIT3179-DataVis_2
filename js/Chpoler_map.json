@@ -51,9 +51,6 @@
         {"field": "Test", "type": "quantitative"}
       ]
     },
-    "layer":{
-
-    },
     "config": {
         "view": {
             "stroke":null
