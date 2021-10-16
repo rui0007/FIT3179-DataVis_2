@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "COVID-19 Active Cases (10 Oct 2020)",
+    "width": 500,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/state_level",
+      "format": {
+            "type": "topojson",
+            "feature": "state_level"
+          }
+    },
+    "transform": [{
+        "lookup": "properties.NAME",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/chmap.csv"
+          },
+          "key": "State",
+          "fields": ["Population"]
+        }
+      }
+    ],
+    "projection": {
+      "type": "mercator"
+    },
+    "mark": {
+      "type": "geoshape"
+      },
+    "encoding": {
+      "color": {
+        "field": "Population",
+        "type": "quantitative",
+        "title":["total number of people"],
+        "scale":{
+            "domain":[
+                400000,
+                3000000,
+                6000000,
+                9000000
+            ],
+            "range":["#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5"]
+        }
+      },
+      "opacity":{
+          "value":0.6
+      },
+      "tooltip": [
+        {"field": "properties.NAME", "type": "nominal", "title": "State"},
+        {"field": "Population", "type": "quantitative"}
+      ]
+    }
+  
+}
+  
