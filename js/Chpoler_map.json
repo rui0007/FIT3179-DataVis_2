@@ -4,7 +4,7 @@
     "width": 500,
     "height": 400,
     "data": {
-      "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/state_level",
+      "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/js/state_level.json",
       "format": {
             "type": "topojson",
             "feature": "state_level"
