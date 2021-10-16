@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "COVID-19 test Cases (10 Oct 2020)",
+    "title": "COVID-19 test Cases 2020",
     "width": 500,
     "height": 400,
     "data": {
@@ -17,7 +17,7 @@
             "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/chmap.csv"
           },
           "key": "State",
-          "fields": ["Total test"]
+          "fields": ["Test"]
         }
       }
     ],
@@ -29,9 +29,9 @@
       },
     "encoding": {
       "color": {
-        "field": "Population",
+        "field": "Test",
         "type": "quantitative",
-        "title":["total test"],
+        "title":["Total"],
         "scale":{
             "domain":[
                 400000,
@@ -47,8 +47,23 @@
       },
       "tooltip": [
         {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
-        {"field": "Total test", "type": "quantitative"}
+        {"field": "Test", "type": "quantitative"}
       ]
+    },
+    "config": {
+        "view": {
+            "stroke":null
+        },
+        "header": {
+            "labelAlign":"center",
+            "labelFont":"Oxygen",
+            "titleFont":"Oxygen"
+        },
+        "title": {
+            "font":"Oxygen",
+            "fontSize":16,
+            "fontWeight":600
+        }
     }
   
 }
