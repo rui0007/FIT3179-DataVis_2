@@ -11,7 +11,7 @@
           }
     },
     "transform": [{
-        "lookup": "properties.NAME",
+        "lookup": "properties.STATE_NAME",
         "from": {
           "data": {
             "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/chmap.csv"
