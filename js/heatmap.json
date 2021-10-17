@@ -4,7 +4,10 @@
     "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/heatmap_state.csv"
   },
   "params": [{ "name": "highlight", "select": "point" }],
-  "mark": { "type": "rect", "strokeWidth": 2 ,"tooltip":true},
+  "mark": { 
+    "type": "rect", 
+    "strokeWidth": 2 ,
+    "tooltip":true},
   "encoding": {
     "y": {
       "field": "state",
