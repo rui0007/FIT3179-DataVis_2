@@ -4,12 +4,12 @@
   "params": [
     {
       "name": "radius",
-      "value": 0,
+      "value": 100,
       "bind": {"input": "range", "min": 0, "max": 100, "step": 1}
     },
     {
       "name": "radius2",
-      "value": 50,
+      "value": 150,
       "bind": {"input": "range", "min": 0, "max": 100, "step": 1}
     },
     {
@@ -42,14 +42,7 @@
     {
       "title": "Stacked Arcs",
       "data": {
-        "values": [
-          {"category": 1, "value": 4},
-          {"category": 2, "value": 6},
-          {"category": 3, "value": 10},
-          {"category": 4, "value": 3},
-          {"category": 5, "value": 7},
-          {"category": 6, "value": 8}
-        ]
+        "url": ""
       },
       "mark": {
         "type": "arc",
