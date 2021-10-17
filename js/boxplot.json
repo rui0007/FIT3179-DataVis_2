@@ -4,7 +4,7 @@
   "width":500,
   "height":400,
   "data": { 
-    "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/box.csv"
+    "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/boxplot_state.csv"
   },
 
   "transform": [
