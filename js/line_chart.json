@@ -1,21 +1,52 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/sum_state_level.csv"
-    },
-    "width": 400,
-    "height": 300,
-    "layer": [
-      {
-        "encoding": {
-          "x": {"field": "Month", "type": "ordinal"},
-          "y": {"field": "confirmed", "type": "quantitative"},
-          "color": {"field": "state", "type": "nominal"}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "line_chart.csv"
+  },
+  "width": 300,
+  "height": 400,
+  "transform": [
+    {
+      "aggregate": [
+        { "op": "sum", "field": "confirmed", "as": "sum_confirmed" }
+      ],
+      "groupby": ["Month", "state"]
+    }
+  ],
+
+  "layer": [
+    {
+      "encoding": {
+        "y": {
+          "field": "Month",
+          "type": "ordinal",
+          "sort": [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+          ]
         },
-        "layer": [
-          {"mark": "line"},
-          {
-            "params": [{
+        "x": {
+          "field": "sum_confirmed",
+          "type": "quantitative"
+        },
+        "color": { "field": "state", "type": "nominal" }
+      },
+
+      "layer": [
+        { "mark": "line" },
+        {
+          "params": [
+            {
               "name": "label",
               "select": {
                 "type": "point",
@@ -23,57 +54,98 @@
                 "nearest": true,
                 "on": "mouseover"
               }
-            }],
-            "mark": "point",
-            "encoding": {
-              "opacity": {
-                "condition": {
-                  "param": "label",
-                  "empty": false,
-                  "value": 1
-                },
-                "value": 0
-              }
+            }
+          ],
+          "mark": { "type": "point", "tooltip": true },
+          "encoding": {
+            "opacity": {
+              "condition": {
+                "param": "label",
+                "empty": false,
+                "value": 1
+              },
+              "value": 0
             }
           }
-        ]
-      },
-      {
-        "transform": [{"filter": {"param": "label", "empty": false}}],
-        "layer": [
-          {
-            "mark": {"type": "rule", "color": "gray"},
-            "encoding": {
-              "x": {"type": "temporal", "field": "Month"}
+        }
+      ]
+    },
+    {
+      "transform": [{ "filter": { "param": "label", "empty": false } }],
+      "layer": [
+        {
+          "mark": { "type": "rule", "color": "gray" },
+          "encoding": {
+            "y": {
+              "type": "nominal",
+              "field": "Month",
+
+              "sort": [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+              ]
+            }
+          }
+        },
+        {
+          "encoding": {
+            "text": {
+              "type": "quantitative",
+              "field": "sum_confirmed"
+            },
+            "y": {
+              "field": "Month",
+              "type": "ordinal",
+              "sort": [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+              ]
+            },
+            "x": {
+              "type": "quantitative",
+              "field": "sum_confirmed"
             }
           },
-          {
-            "encoding": {
-              "text": {"type": "nominal", "field": "state"},
-              "x": {"type": "temporal", "field": "Month"},
-              "y": {"type": "quantitative", "field": "confirmed"}
-            },
-            "layer": [
-              {
-                "mark": {
-                  "type": "text",
-                  "stroke": "white",
-                  "strokeWidth": 2,
-                  "align": "left",
-                  "dx": 5,
-                  "dy": -5
-                }
-              },
-              {
-                "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
-                "encoding": {
-                  "color": {"type": "nominal", "field": "state"}
-                }
+          "layer": [
+            {
+              "mark": {
+                "type": "text",
+                "stroke": "white",
+                "strokeWidth": 2,
+                "align": "left",
+                "dx": 5,
+                "dy": -5
               }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+            },
+            {
+              "mark": { "type": "text", "align": "left", "dx": 5, "dy": -5 },
+              "encoding": {
+                "color": { "type": "nominal", "field": "state" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
