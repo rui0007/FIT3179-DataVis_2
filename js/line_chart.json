@@ -8,7 +8,7 @@
     "layer": [
       {
         "encoding": {
-          "x": {"field": "Month", "type": "temporal"},
+          "x": {"field": "Month", "type": "ordinal"},
           "y": {"field": "confirmed", "type": "quantitative"},
           "color": {"field": "state", "type": "nominal"}
         },
