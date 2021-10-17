@@ -1,31 +1,33 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "values": [
-      {"actual": "A", "predicted": "A", "count": 13},
-      {"actual": "A", "predicted": "B", "count": 0},
-      {"actual": "A", "predicted": "C", "count": 0},
-      {"actual": "B", "predicted": "A", "count": 0},
-      {"actual": "B", "predicted": "B", "count": 10},
-      {"actual": "B", "predicted": "C", "count": 6},
-      {"actual": "C", "predicted": "A", "count": 0},
-      {"actual": "C", "predicted": "B", "count": 0},
-      {"actual": "C", "predicted": "C", "count": 9}
-    ]
+    "url": "heatmap.csv"
   },
-  "params": [{"name": "highlight", "select": "point"}],
-  "mark": {"type": "rect", "strokeWidth": 2},
+  "params": [{ "name": "highlight", "select": "point" }],
+  "mark": { "type": "rect", "strokeWidth": 2 ,"tooltip":true},
   "encoding": {
     "y": {
-      "field": "actual",
+      "field": "state",
       "type": "nominal"
     },
     "x": {
-      "field": "predicted",
-      "type": "nominal"
+      "field": "month",
+      "type": "nominal",
+      "sort": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT"
+      ]
     },
     "fill": {
-      "field": "count",
+      "field": "vaccine",
       "type": "quantitative"
     },
     "stroke": {
@@ -37,17 +39,17 @@
       "value": null
     },
     "opacity": {
-      "condition": {"param": "highlight", "value": 1},
+      "condition": { "param": "highlight", "value": 1 },
       "value": 0.5
     },
-    "order": {"condition": {"param": "highlight", "value": 1}, "value": 0}
+    "order": { "condition": { "param": "highlight", "value": 1 }, "value": 0 }
   },
   "config": {
     "scale": {
       "bandPaddingInner": 0,
       "bandPaddingOuter": 0
     },
-    "view": {"step": 40},
+    "view": { "step": 40 },
     "range": {
       "ramp": {
         "scheme": "yellowgreenblue"
