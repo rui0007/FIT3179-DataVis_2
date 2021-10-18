@@ -22,8 +22,8 @@ section {
 }
 h1 {
 	text-align: center;
-	font-style: italic;
 	font-size: 25;
+	font: Verdana;
 }
 
 h3 {
