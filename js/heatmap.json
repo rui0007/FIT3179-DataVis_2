@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title":"heatmap"
   "data": {
     "url": "https://raw.githubusercontent.com/rui0007/FIT3179-DataVis_2/main/data/heatmap_state.csv"
   },
