@@ -32,5 +32,21 @@
       "type": "quantitative",
       "scale": { "zero": false }
     }
-  }
+  },
+  "config": {
+    "view": {
+        "stroke":null
+    },
+    "header": {
+        "labelAlign":"center",
+        "labelFont":"sans-serif",
+        "titleFont":"Verdana"
+    },
+    "title": {
+        "font":"Verdana",
+        "fontSize":16,
+        "fontWeight":600
+    }
+}
+  
 }

@@ -57,11 +57,11 @@
         },
         "header": {
             "labelAlign":"center",
-            "labelFont":"Oxygen",
-            "titleFont":"Oxygen"
+            "labelFont":"sans-serif",
+            "titleFont":"Verdana"
         },
         "title": {
-            "font":"Oxygen",
+            "font":"Verdana",
             "fontSize":16,
             "fontWeight":600
         }
