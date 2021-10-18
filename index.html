@@ -1,27 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-  
-  
-  <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
-  
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+    
 </head>
+
+
 <body>
-  
-<div id="dot_map"></div>
+    <article>
 
-<script type="text/javascript">
+        <h1 style="text-align: center;">Title</h1>
+        <section>
 
- var spec2 = "js/confrimed_dot_map.json";
- vegaEmbed('#dot_map', spec2).then(function(result) {
+            <div class="content">test only</div>
+            <div>
+                <h3>title</h3>
+                <div id="chmap"> </div>
+
+            </div>
+        </section>
+        <section>
+            <div>
+                <h3>title</h3>
+                <div id="dount"> </div>
+            </div>
+            <div class="content">test only</div>
+        </section>
+        <section>
+            <div class="content"> test only</div>
+            <div>
+                <h3>title</h3>
+                <div id="line"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h3>title</h3>
+                <div id="heatmap"> </div>
+            </div>
+            <div class="content">test only</div>
+
+        </section>
+        <section>
+            <div class="content">test only</div>
+            <div>
+                <h3>title</h3>
+                <div id="box"> </div>
+            </div>
+
+
+        </section>
+    </article>
+    <script type="text/javascript">
+        
+
+        var spec1 = "js/dount.json";
+        vegaEmbed('#dount', spec1,{"actions":false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
- }).catch(console.error);
-</script>
+        }).catch(console.error);
+        
+        var spec2 = "js/heatmap.json"
+        vegaEmbed("#heatmap",spec2,{"actions":false}).then(function(result){
+        }).catch(console.error);
+        
+        var spec3 = "js/line_chart.json"
+        vegaEmbed("#line",spec3,{"actions":false}).then(function(result){
+        }).catch(console.error);
+        
+        var spec4 = "js/boxplot.json"
+        vegaEmbed("#box", spec4,{"actions":false}).then(function(reslut){
+        }).catch(console.error);
 
+        var spec5 = "js/Chpoler_map.json"
+        vegaEmbed("#chmap", spec5,{"actions":false}).then(function(reslut){
+        }).catch(console.error);
+    </script>
 </body>
+
 </html>
