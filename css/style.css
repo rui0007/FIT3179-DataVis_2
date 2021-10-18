@@ -18,11 +18,12 @@ section {
 	border-radius: 10px;
 	margin: 20px;
 	padding: 20px;
+	height: auto;
 }
 h1 {
 	text-align: center;
 	font-style: italic;
-	font-size: 20;
+	font-size: 25;
 }
 
 h3 {
@@ -32,4 +33,10 @@ h3 {
 
 .content {
 	padding: 20px;
+}
+
+p {
+	font-size: 10;
+	font:sans-serif;
+	color:red;
 }
